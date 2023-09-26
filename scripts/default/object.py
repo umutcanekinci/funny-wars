@@ -9,6 +9,7 @@ class Object(dict[str : pygame.Surface]):
 
 	def __init__(self, position: tuple = ("CENTER", "CENTER"), size: tuple = (0, 0), imagePaths = {}, surfaceSize: tuple = None, screenPosition: tuple = None, show = True):
 		
+		self.rect = pygame.rect.Rect(0, 0, 0, 0)
 		super().__init__()
 		self.SetStatus(None)
 		
@@ -33,7 +34,7 @@ class Object(dict[str : pygame.Surface]):
 
 	def AddImage(self, status, imagePath):
 
-		self.AddSurface(status, GetImage(imagePath, self.size))
+		self.AddSurface(status, GetImage(imagePath, self.rect.size))
 
 	def AddSurface(self, status: str, surface: pygame.Surface):
 		
@@ -47,19 +48,17 @@ class Object(dict[str : pygame.Surface]):
 
 	def Resize(self, size: tuple):
 
-		self = Object(self.position, size, self.imagePaths, self.surfaceSize, self.show)
+		self = Object(self.rect.topleft, size, self.imagePaths, self.surfaceSize, self.show)
 
 	def SetSize(self, size):
 		
 		if size and size[0] and size[1]:
 
-			self.size = self.width, self.height = size
+			self.rect.size = size
 
 			self.AddImages(self.imagePaths)
 
 		else:
-
-			self.size = [0, 0]
 
 			self.AddImages(self.imagePaths)
 
@@ -67,67 +66,48 @@ class Object(dict[str : pygame.Surface]):
 
 				if "Normal" in self:
 
-					size = self["Normal"].get_rect().size
+					self.rect.size = self["Normal"].get_rect().size
 				
 				else:
 
-					size = list(self.values())[0].get_rect().size
-
-				self.size = self.width, self.height = size
+					self.rect.size = list(self.values())[0].get_rect().size
 			
 	def SetPosition(self, position: tuple) -> None:
 
-		self.position = pygame.math.Vector2(0, 0)
 		self.SetX(position[0])
 		self.SetY(position[1])
 		
 	def SetScreenPosition(self, screenPosition: tuple):
 
+		self.screenRect = self.rect.copy()
+
 		if not screenPosition:
 
-			self.screenPosition = self.position
+			self.screenRect.topleft = self.rect.topleft
 
 		else:
 
-			self.screenPosition = screenPosition
-
-		self.screenRect = pygame.Rect(*self.screenPosition, *self.size)
+			self.screenRect.topleft = screenPosition
 	
 	def SetX(self, x: int) -> None:
 
 		if x == "CENTER":
 		
-			self.position.x = (self.surfaceSize[0] - self.width) / 2
+			self.rect.x = (self.surfaceSize[0] - self.width) / 2
 
 		else:
 
-			self.position.x = x
-
-		if hasattr(self, "rect"):
-		
-			self.rect.topleft = self.position
-
-		else:
-
-			self.rect = pygame.Rect(self.position, self.size)
+			self.rect.x = x
 
 	def SetY(self, y: int) -> None:
 		
 		if y == "CENTER":
 			
-			self.position.y = (self.surfaceSize[1] - self.height) / 2
+			self.rect.y = (self.surfaceSize[1] - self.height) / 2
 		
 		else:
 
-			self.position.y = y
-		
-		if hasattr(self, "rect"):
-			
-			self.rect.topleft = self.position
-
-		else:
-
-			self.rect = pygame.Rect(self.position, self.size)
+			self.rect.y = y
 
 	def isMouseOver(self, mousePosition: tuple) -> bool:
 		
@@ -177,7 +157,7 @@ class Object(dict[str : pygame.Surface]):
 
 	def Move(self, velocity: tuple):
 		
-		self.SetPosition((self.position + pygame.math.Vector2(velocity)))
+		self.SetPosition((self.rect.topleft + pygame.math.Vector2(velocity)))
 
 	def __Move(self):
 

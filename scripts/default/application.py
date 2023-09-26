@@ -17,7 +17,7 @@ except Exception as error:
 #endregion
 
 #-# Application Class #-#
-class Application(dict[str : pygame.Surface]):
+class Application(dict[str : dict[str : pygame.Surface]]):
     
     def __init__(self, title: str = "Game", size: tuple = (640, 480), backgroundColors: list = {}, FPS: int = 60) -> None:
         
@@ -72,6 +72,10 @@ class Application(dict[str : pygame.Surface]):
 
         self.HandleExitEvents(event)
 
+    def Debug(self, text):
+
+        self.debugText = Text((0, 0), str(text), 20, backgroundColor=Black, isCentered=False)
+
     def HandleExitEvents(self, event: pygame.event.Event) -> None:
 
         if event.type == pygame.QUIT:
@@ -118,6 +122,10 @@ class Application(dict[str : pygame.Surface]):
     def OpenWindow(self) -> None:
 
         self.window = pygame.display.set_mode(self.size)
+
+    def MakeFullScreen(self) -> None:
+
+        pygame.display.toggle_fullscreen()
 
     def CenterWindow(self) -> None:
 
@@ -210,6 +218,11 @@ class Application(dict[str : pygame.Surface]):
             for object in self[self.tab].values():
                     
                 object.Draw(self.window)
+
+        #-# Draw Debug #-#
+        if hasattr(self, "debugText"):
+
+            self.debugText.Draw(self.window)
 
         #-# Draw Cursor #-#
         if hasattr(self, "cursor"):
