@@ -8,6 +8,7 @@ Oyun maalesef akademik nedenlerden dolayı bir prototip olmaktan ileri gidemedi 
 ## Takım
 
 Developer -> Umutcan Ekinci
+
 2D Designer -> Arda Akdoğran
 
 ## Oyundan Görseller
