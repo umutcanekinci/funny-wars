@@ -7,7 +7,7 @@ Oyun maalesef akademik nedenlerden dolayı bir prototip olmaktan ileri gidemedi 
 
 ## Oyundan Görseller
 
-![alt text](https://github.com/umutcanekinci/funny-wars/blob/main/images/samples/sample-1.png?raw=true)
+![alt text](https://github.com/umutcanekinci/funny-wars/blob/main/images/samples/sample.png?raw=true)
 
 ## Başlangıç
 
