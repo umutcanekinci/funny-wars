@@ -1,6 +1,6 @@
 # Funny Wars
 
-Bu projede, Python ile geliştirilmiş bir oyun bulunmaktadır. FunnyWars bir 2D top-down multiplayer strateji oyunudur. Çıplak olan ana karakterimizle haritada reastgele çıkan meyveleri yiyip belli bir miktar koşarak bizim için savaşan boktan askerleri yönetip diğerleri ile savaştığımız, klozete gidenin kazandığı FunnyWars adından da anlaşılabileceği üzere eğlencesine yapılmış bir oyundur.
+Bu projede, Python ile geliştirilmiş bir oyun bulunmaktadır. FunnyWars bir 2D top-down multiplayer strateji oyunudur. Çıplak olan ana karakterimizle haritada reastgele çıkan meyveleri yiyip belli bir miktar koşarak bizim için savaşan kaka askerleri yönetip diğerleri ile savaştığımız, klozete gidenin kazandığı FunnyWars adından da anlaşılabileceği üzere eğlencesine yapılmış bir oyundur.
 
 FunnyWars yakın arkadaşım olan Arda Akdoğan ile lise yıllarımızda birlikte komik bir strateji oyunu yapmak istememizle doğmuş bir oyundur.
 Oyun maalesef akademik nedenlerden dolayı bir prototip olmaktan ileri gidemedi ve oyunu bitiremedik ancak planlama ve birlikte çalışma yeteneklerimiz geliştirdiğimiz eğlenceli bir proje oldu.
