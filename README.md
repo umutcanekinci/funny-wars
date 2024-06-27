@@ -5,6 +5,11 @@ Bu projede, Python ile geliştirilmiş bir oyun bulunmaktadır. FunnyWars bir 2D
 FunnyWars yakın arkadaşım olan Arda Akdoğan ile lise yıllarımızda birlikte komik bir strateji oyunu yapmak istememizle doğmuş bir oyundur.
 Oyun maalesef akademik nedenlerden dolayı bir prototip olmaktan ileri gidemedi ve oyunu bitiremedik ancak planlama ve birlikte çalışma yeteneklerimiz geliştirdiğimiz eğlenceli bir proje oldu.
 
+## Takım
+
+Developer -> Umutcan Ekinci
+2D Designer -> Arda Akdoğran
+
 ## Oyundan Görseller
 
 ![alt text](https://github.com/umutcanekinci/funny-wars/blob/main/images/sample.png?raw=true)
