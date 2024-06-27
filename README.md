@@ -58,7 +58,7 @@ python __main__.py
 
 ### Kullanım
 
-Oyunun amacı: Şehrini kur ve yönet, şehrin geliri ile daha fazla bina inşa et ve onları birleştirerek şehrini geliştir geliştir ve bu sayede daha fazla kazan.
+Haritada çıkan meyveleri ye, ordunu kur ve rakiplerini yen!
 
 #### Kontroller: 
 
