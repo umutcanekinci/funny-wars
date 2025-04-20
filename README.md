@@ -1,112 +1,110 @@
 # Funny Wars
 
-Bu projede, Python ile geliştirilmiş bir oyun bulunmaktadır. FunnyWars bir 2D top-down multiplayer strateji oyunudur. Çıplak olan ana karakterimizle haritada reastgele çıkan meyveleri yiyip belli bir miktar koşarak bizim için savaşan kaka askerleri yönetip diğerleri ile savaştığımız, klozete gidenin kazandığı FunnyWars adından da anlaşılabileceği üzere eğlencesine yapılmış bir oyundur.
+This project features a game developed in Python. FunnyWars is a 2D top-down multiplayer strategy game. As the name suggests, it's a humorous game where we control our main naked character, eat randomly appearing fruits on the map, and command poop soldiers (spawned by running) to fight others. The player who reaches the toilet wins the game.
 
-FunnyWars yakın arkadaşım olan Arda Akdoğan ile lise yıllarımızda birlikte komik bir strateji oyunu yapmak istememizle doğmuş bir oyundur.
-Oyun maalesef akademik nedenlerden dolayı bir prototip olmaktan ileri gidemedi ve oyunu bitiremedik ancak planlama ve birlikte çalışma yeteneklerimiz geliştirdiğimiz eğlenceli bir proje oldu.
+FunnyWars was born out of a desire between my close friend Arda Akdoğan and me during our high school years to create a funny strategy game together.
+Unfortunately, due to academic reasons, the game remained only a prototype and was never fully completed. However, it turned out to be a fun project that helped us improve our planning and collaboration skills.
 
-## Takım
+## Team
 
 Developer -> Umutcan Ekinci
 
-2D Designer -> Arda Akdoğran
+2D Designer -> Arda Akdoğan
 
-## Oyundan Görseller
+## Screenshots
 
-![alt text](https://github.com/umutcanekinci/funny-wars/blob/main/images/sample.png?raw=true)
+![game](https://github.com/umutcanekinci/funny-wars/blob/main/images/sample.png?raw=true)
 
-## Başlangıç
+## Getting Started
 
-### Gereksinimler
+### Requirments
 
-Projeyi çalıştırmak için aşağıdaki yazılımlara ihtiyacınız olacaktır:
+To run the project, you will need the following software:
 
 - Python 3.x
-- Gerekli kütüphaneler (aşağıda listelenmiştir)
+- Required libraries (listed below)
     - pygame=2.5.2
 
-### Kurulum
+### Installation
 
-*Kurulum yapmadan derlenmiş edilmiş çalıştırılabilir uygulama ile devam etmek istiyorsanız kurulum aşaması atlayıp __main__.exe dosyasını çalıştırabilirsiniz.
+*If you prefer to run the precompiled executable without installation, you can skip the installation steps and directly run the __main__.exe file.
 
 
-Gerekli kütüphaneleri yüklemek için aşağıdaki adımları izleyin:
+To install the required libraries, follow these steps:
 
-1. Bu projeyi klonlayın:
+1. Clone this project:
     ```sh
     git clone https://github.com/umutcanekinci/funny-wars.git
     cd funny-wars
     ```
 
-2. Sanal ortam oluşturun:
+2. Create a virtual environment:
     ```sh
     python -m venv venv
     source venv/bin/activate # Windows kullanıyorsanız: venv\Scripts\activate
     ```
 
-3. Gerekli paketleri yükleyin:
+3. Install the necessary packages:
     ```sh
     pip install -r requirements.txt
     ```
 
-### Çalıştırma
+### Running the Game
 
-Oyunu çalıştırmak için şu komutu kullanın:
+To run the game, use the following command:
 ```sh
 python __main__.py
 ```
 
-### Kullanım
+### Gameplay
 
-Haritada çıkan meyveleri ye, ordunu kur ve rakiplerini yen!
+Eat the fruits that appear on the map, build your army, and defeat your opponents!
 
-#### Kontroller: 
+#### Controls:
+##### Movement keys:
+W / Up Arrow
 
-##### Hareket etme tuşları:
+A / Left Arrow
 
-W / Yukarı ok tuşu
+S / Down Arrow
 
-A / Sol ok tuşu
+D / Right Arrow
 
-S / Aşağı ok tuşu
+Press the ESC key to exit the game.
 
-D / Sağ ok tuşu
+### Contributing
 
-ESC Tuşu ile oyundan çıkabilirsiniz.
+If you would like to contribute, please follow these steps:
 
-### Katkıda Bulunma
+1. Fork this repository (click the Fork button in the top right).
 
-Katkıda bulunmak isterseniz, lütfen şu adımları izleyin:
-
-1. Bu depoyu fork'layın (sağ üstteki Fork butonuna tıklayın).
-
-2. Fork'ladığınız depoyu yerel makinenize klonlayın:
+2. Clone the forked repo to your local machine:
 ```sh
 git clone https://github.com/umutcanekinci/funny-wars.git
 cd funny-wars
 ```
 
-3. Yeni bir dal oluşturun (örn: feature/yenilik):
+3. Create a new branch (e.g., feature/new-feature):
 ```sh
 git checkout -b feature/yenilik
 ```
 
-4. Değişikliklerinizi yapın ve commit edin:
+4. Make your changes and commit:
 ```sh
 git commit -am 'Yeni özellik ekledim'
 ```
 
-5. Değişikliklerinizi dalınıza iterek GitHub'a gönderin:
+5. Push your changes to your branch:
 ```sh
 git push origin feature/yenilik
 ```
 
-6. Pull request oluşturun.
+6. Create a pull request.
 
-### Lisans
+### License
 
-Bu proje MIT Lisansı ile lisanslanmıştır - detaylar için LICENSE dosyasına bakabilirsiniz.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-### İletişim
+### Contact
 
-Sorularınız veya önerileriniz için umutcannekinci@gmail.com üzerinden iletişime geçebilirsiniz.
+For any questions or suggestions, feel free to reach out at: umutcannekinci@gmail.com
